@@ -212,8 +212,8 @@ Module({
       }
 }));
 
-Module({pattern: 'feelhigh', fromMe: w, desc: '' }, (async (message, match) => {
-    return await message.client.sendMessage(message.jid, {
+Module({pattern: 'feelhigh', fromMe: w, desc: 'feel bad' }, (async (message, match) => {
+    await message.client.sendMessage(message.jid, {
         video: {
             url: fs.readFileSync("temp/feeling_high.mp4")
         },
