@@ -211,3 +211,14 @@ Module({
         });
       }
 }));
+
+Module({pattern: 'feelhigh', fromMe: w, desc: '' }, (async (message, match) => {
+    return await message.client.sendMessage(message.jid, {
+        video: {
+            url: fs.readFileSync("temp/feeling_high.mp4")
+        },
+        mimetype: "video/mp4",
+        caption: "Memosa",
+        thumbnail: await skbuffer(thumbnail)
+    },{quoted:message.data});
+}));
